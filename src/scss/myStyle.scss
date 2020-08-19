@@ -266,3 +266,42 @@ input[type=submit] {
 }
 
 /* end header__bottom */
+
+/* body */
+
+.info__title{
+    opacity: 0.8;
+    font-family: $textBase;
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 600;
+
+    span{
+        color: $colorText;
+    }
+}
+
+.block{
+    margin: 144px 0px;
+
+    &-light{
+        background-color: $colorBgFirst;
+    }
+
+    &-dark{
+        background-color: $colorBgSecond;
+    }
+}
+
+.workingProcess{
+    display: flex;
+    flex-direction: row;
+
+    &__info{
+        
+    }
+
+    &__cards{
+
+    }
+}
