@@ -2,7 +2,7 @@
 @import "variables";
 
 
-.header .container{
+.container{
     padding: 0;
 }
 
@@ -269,12 +269,27 @@ input[type=submit] {
 
 /* body */
 
+.block{
+    padding-top: 144px;
+    padding-bottom: 61px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 .info__title{
     opacity: 0.8;
     font-family: $textBase;
     font-size: 50px;
     line-height: 45px;
     font-weight: 600;
+    margin-bottom: 9px;
 
     span{
         color: $colorText;
@@ -282,8 +297,7 @@ input[type=submit] {
 }
 
 .block{
-    margin: 144px 0px;
-
+ 
     &-light{
         background-color: $colorBgFirst;
     }
@@ -295,13 +309,80 @@ input[type=submit] {
 
 .workingProcess{
     display: flex;
-    flex-direction: row;
 
     &__info{
         
     }
 
     &__cards{
+        display: flex;
+        flex-direction: row;
+        margin-top: 90px;
+        margin-bottom: 100px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        .card:nth-child(1){
+            background-color: #4eb2f7;
+        }
+        .card:nth-child(2){
+            background-color: #c049f8;
+        }
+        .card:nth-child(3){
+            background-color: #817eff;
+        }
+        .card:nth-child(4){
+            background-color: #f74770;
+        }
+        .card{
+            width: 262px;
+            height: 263px;
+            box-shadow: 0px 0px 35px 0px rgba(19,19,21,0.2);
+            align-items: center;
 
+            &__image{
+                margin-top: 50px;
+                max-width: 100%;
+                height: auto;
+            }
+
+            &__title{
+                margin-top: 10px;
+                opacity: 0.9;
+                font-family: $textBase;
+                font-size: 20px;
+                line-height: 42px;
+                font-weight: 600;
+                letter-spacing: 0.01em;
+                color: #ffffff;
+            }
+
+            &__info{
+                margin-top: 10px;
+                opacity: 0.74;
+                font-family: $textBase;
+                font-size: 15px;
+                line-height: 22px;
+                font-weight: 400;
+                letter-spacing: 0.01em;
+                color: #ffffff;
+                width: 200px;
+                text-align: center;
+            }
+
+            &__btn{
+                position: absolute;
+                bottom: -25px;
+                width: 228px;
+                height: 55px;
+                background-color: #ffffff;
+                box-shadow: 1px 6px 14px 0px rgba(19,19,21,0.09);
+                border-radius: 27px;
+                img{
+                    width: 18px;
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 }
