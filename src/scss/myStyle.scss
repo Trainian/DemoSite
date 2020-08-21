@@ -60,6 +60,18 @@ input[type=submit] {
     color: $colorText;
 }
 
+.btn{
+    width: 228px;
+    height: 55px;
+    background-color: #ffffff;
+    box-shadow: 1px 6px 14px 0px rgba(19,19,21,0.09);
+    border-radius: 27px;
+    img{
+        width: 18px;
+        margin-right: 10px;
+    }
+}
+
 /* Header */
 .header{
     height: 920px;
@@ -373,16 +385,53 @@ input[type=submit] {
             &__btn{
                 position: absolute;
                 bottom: -25px;
-                width: 228px;
-                height: 55px;
-                background-color: #ffffff;
-                box-shadow: 1px 6px 14px 0px rgba(19,19,21,0.09);
-                border-radius: 27px;
-                img{
-                    width: 18px;
-                    margin-right: 10px;
-                }
             }
         }
+    }
+}
+
+.featuredWorks__images{
+    margin-bottom: 85px;
+    .workImages{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        .image{
+            width: 360px;
+            height: 358px;
+            background-color: #ff5c36;
+            margin-bottom: 23px;
+        }
+    }
+}
+
+.options{
+
+    display: flex;
+    &__choiser{
+
+        .choose{
+
+            img{
+
+            }
+        }
+    }
+
+    &__information{
+        .title{
+
+        }
+    }
+
+    &__image{
+        img{
+
+        }
+    }
+
+    &__btn{
+
     }
 }

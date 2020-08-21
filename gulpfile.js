@@ -68,7 +68,7 @@ function htmlInclude(){
 }
 
 function imgToApp (){
-    return src(["./src/img/*.{jpg,jpeg,png}"])
+    return src(["./src/img/**/*.{jpg,jpeg,png}"])
     .pipe(dest("./app/img"))
     .pipe(browsersync.stream())
 }
