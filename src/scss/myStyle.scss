@@ -406,32 +406,65 @@ input[type=submit] {
     }
 }
 
+.ServicesWeProvide__info{
+    margin-bottom: 110px;
+}
+
 .options{
 
     display: flex;
     &__choiser{
 
         .choose{
-
+            display: flex;
+            width: 104px;
+            height: 92px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 36px 0px rgba(19,19,21,0.2);
+            border-radius: 2px;
+            margin: 7px 0px;
+            justify-content: center;
+            align-items: center;
             img{
-
+                padding: 30px 0px 0px 15px;
+                margin: 0 auto;
             }
         }
     }
 
     &__information{
-        .title{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-left: 50px;
+        p{
+            margin-bottom: 20px;
+        }
 
+        .title{
+            opacity: 0.74;
+            font-family: $textBase;
+            font-size: 30px;
+            line-height: 45px;
+            font-weight: 400;
+            color: #000000;
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .title::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            border-style: solid;
+            border-color: #ff5c36;
+            border-width: 2px;
+            width: 57px;
         }
     }
 
     &__image{
-        img{
-
-        }
-    }
-
-    &__btn{
-
+        margin-top: 15px;
+        padding-left: 55px;
     }
 }
