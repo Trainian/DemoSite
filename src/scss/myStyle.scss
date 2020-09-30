@@ -473,12 +473,14 @@ input[type=submit] {
     margin-bottom: 100px;
 }
 
+
 .team{
 
     &__cards{
         display: flex;
         flex-wrap: wrap;
         margin-top: 107px;
+        margin-bottom: 105px;
 
         .box{
             width: 360px;
@@ -486,6 +488,8 @@ input[type=submit] {
             box-shadow: 0px 0px 2px 0px rgba(19,19,21,0.6);
             position: relative;
             margin: 0 15px;
+            background-color: #fff3f0;
+            z-index: 0;
 
             &__hide_color{
                 position: absolute;
@@ -497,21 +501,45 @@ input[type=submit] {
                 background-color: #ff5c36;
             }
 
-            &__hide_unhide{
-                background-color: #fff3f0;
-                z-index: 0;
+            &__hide_color:hover{
+                opacity: 0;
             }
 
             &__skills{
 
+                &_ui{
+                    width: 151px;
+                    height: 4px;
+                    background-color: #817f7e;
+                    border-radius: 1.5px;
+                }
+
+                &_ui::after{
+                    content: none;
+                    background-color: #ff6e47;
+                    border-radius: 1.5px;
+                }
             }
 
             &__about{
 
             }
+            
+        }
+        
+        .box:nth-child(1){
 
-            &__active{
+            &__skills{
 
+                &_ui:nth-child(1)::after{
+                    content: "";
+                    background-color: #ff6e47;
+                    border-radius: 1.5px;
+                    display: block;
+                    height: 100%;
+                    width: 70%;
+                    border: 2px solid #ff5c36;
+                }
             }
         }
 
@@ -524,6 +552,4 @@ input[type=submit] {
     }
 }
 
-.team__cards{
-    margin-bottom: 105px;
-}
+
