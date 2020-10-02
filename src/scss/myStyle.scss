@@ -501,13 +501,19 @@ input[type=submit] {
                 background-color: #ff5c36;
             }
 
-            &__hide_color:hover{
+            &__hide_unhide{
                 opacity: 0;
             }
 
             &__skills{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;              
 
                 &_ui{
+                    position: relative;
                     width: 151px;
                     height: 4px;
                     background-color: #817f7e;
@@ -515,9 +521,32 @@ input[type=submit] {
                 }
 
                 &_ui::after{
-                    content: none;
+                    content: "";
+                    position: absolute;
+                    left: 0;
                     background-color: #ff6e47;
                     border-radius: 1.5px;
+                    border-style: solid;
+                    border-color: #ff6e47;
+                    border-width: 2px;                    
+                }
+            }
+
+            &:nth-child(1){
+
+                .box__skills{
+
+                    &_ui:nth-child(2)::after{
+                        width: var(--my-width-var);
+                    }
+
+                    &_ui:nth-child(4)::after{
+                        width: var(--my-width-var);
+                    }
+
+                    &_ui:nth-child(6)::after{
+                        width: var(--my-width-var);
+                    }
                 }
             }
 
@@ -527,21 +556,6 @@ input[type=submit] {
             
         }
         
-        .box:nth-child(1){
-
-            &__skills{
-
-                &_ui:nth-child(1)::after{
-                    content: "";
-                    background-color: #ff6e47;
-                    border-radius: 1.5px;
-                    display: block;
-                    height: 100%;
-                    width: 70%;
-                    border: 2px solid #ff5c36;
-                }
-            }
-        }
 
         .box:first-child{
             margin-left: 0;
